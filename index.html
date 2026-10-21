@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simmens Romario — Graphic &amp; UI Designer</title>
+<meta name="theme-color" content="#0a0a0a">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--fg:#f5efdc;--mute:#a89d80;--line:#2c2616;--y:#d4af37;--card:#1b1810;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.6 Montserrat,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 5vw;background:var(--bg);border-bottom:1px solid var(--line)}
+nav b{font-weight:800}
+nav div{display:flex;gap:20px;font-size:14px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--fg)}
+.hero{position:relative;min-height:82vh;display:grid;align-items:center;padding:8vh 5vw;overflow:hidden;background:linear-gradient(104deg,var(--y) 0 56%,var(--bg) 56%)}
+.hero::after{content:"";position:absolute;top:-5%;bottom:-5%;left:55.2%;width:8px;background:var(--bg);transform:skewX(-14deg);transform-origin:top}
+.hero h1{position:relative;z-index:1;margin:0;font-weight:800;font-size:clamp(44px,9vw,120px);line-height:.95;letter-spacing:-.02em;color:#0a0a0a;max-width:9ch}
+.hero p{position:relative;z-index:1;margin:24px 0 0;max-width:34ch;font-size:18px;color:#0a0a0a}
+.hero .tag{position:absolute;z-index:1;right:5vw;bottom:8vh;text-align:right;color:var(--y);font-weight:300}
+.hero .tag b{display:block;font-size:clamp(40px,6vw,72px);font-weight:800;line-height:1}
+@media(max-width:700px){.hero{background:linear-gradient(180deg,var(--y) 0 62%,var(--bg) 62%)}.hero::after{display:none}.hero .tag{left:5vw;right:auto;text-align:left}}
+section{padding:90px 5vw;border-bottom:1px solid var(--line)}
+h2{margin:0 0 40px;font-weight:800;font-size:clamp(28px,4vw,44px);letter-spacing:-.01em}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+@media(max-width:800px){.about{grid-template-columns:1fr}}
+.about p.lead{font-size:22px;font-weight:300;max-width:34em;margin:0 0 32px}
+.bar{display:grid;grid-template-columns:150px 1fr 44px;gap:12px;align-items:center;margin:10px 0;font-size:14px}
+.bar i{display:block;height:8px;background:var(--card);border-radius:4px;overflow:hidden}
+.bar i span{display:block;height:100%;background:var(--y)}
+.bar em{font-style:normal;color:var(--mute);text-align:right}
+h3{margin:28px 0 8px;font-size:15px;font-weight:600}
+.tl{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:36px}
+.tl::before{content:"";position:absolute;top:10px;left:0;right:0;height:6px;background:var(--y)}
+.tl div{position:relative}
+.tl div::before{content:"";position:absolute;top:-34px;left:0;width:18px;height:18px;background:var(--y);border:3px solid var(--bg);border-radius:50%}
+.tl small{color:var(--mute);display:block}.tl b{font-weight:600}
+@media(max-width:800px){.tl{grid-template-columns:1fr 1fr}}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.filters button{font:inherit;font-size:14px;padding:8px 16px;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:999px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--y);border-color:var(--y);color:#0a0a0a;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.t{border:1px solid var(--y);min-height:230px;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:4px;transition:transform .2s}
+.t:hover{transform:translateY(-4px)}
+.t small{opacity:.8;font-size:12px}
+.t b{font-size:19px;line-height:1.2;font-weight:800;margin:4px 0}
+.t span{font-size:13px;opacity:.9}
+.t[hidden]{display:none}
+.contact{text-align:left}
+.contact a.big{display:inline-block;font-weight:800;font-size:clamp(22px,4.4vw,52px);text-decoration:none;border-bottom:8px solid var(--y);word-break:break-all}
+.contact p{color:var(--mute);margin:28px 0 0}
+footer{padding:28px 5vw;color:var(--mute);font-size:13px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><b>Simmens Romario</b><div><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div><h1>Simmens Romario</h1><p>Graphic and UI designer. I turn ideas into posters, packaging, books and infographics that are clear and good to look at.</p></div>
+<div class="tag"><b>2017–2026</b>Portfolio</div>
+</header>
+
+<section id="about">
+<h2>About</h2>
+<div class="about">
+<div>
+<p class="lead">My journey in design began with a fascination for the power of visuals to convey stories and emotions. Over the years I’ve perfected my skills in graphic design, aiming for work that is creative and visually appealing.</p>
+<h3>Education</h3><p style="margin:0">Mechanical Engineering, 2012–2016</p>
+</div>
+<div>
+<h3 style="margin-top:0">Design skills</h3>
+<div class="bar"><span>Adobe Photoshop</span><i><span style="width:60%"></span></i><em>60%</em></div>
+<div class="bar"><span>Adobe InDesign</span><i><span style="width:85%"></span></i><em>85%</em></div>
+<div class="bar"><span>Adobe Illustrator</span><i><span style="width:65%"></span></i><em>65%</em></div>
+<h3>Languages</h3>
+<div class="bar"><span>English</span><i><span style="width:90%"></span></i><em>90%</em></div>
+<div class="bar"><span>Tamil</span><i><span style="width:90%"></span></i><em>90%</em></div>
+<div class="bar"><span>French</span><i><span style="width:10%"></span></i><em>10%</em></div>
+</div>
+</div>
+</section>
+
+<section id="experience">
+<h2>Work experience</h2>
+<div class="tl">
+<div><small>2017–2020</small><b>Graphic Designer</b><br>Ad2 pro</div>
+<div><small>2020–2021</small><b>Creative Designer</b><br>Studio 3 Creations</div>
+<div><small>2021–2024</small><b>Production Artist</b><br>RRD Communication Enabled</div>
+<div><small>2024–present</small><b>Senior Production Artist</b><br>RRD Communication Enabled</div>
+</div>
+</section>
+
+<section id="work">
+<h2>Selected work</h2>
+<div class="filters" id="filters" role="group" aria-label="Filter work by category"></div>
+<div class="grid" id="grid"></div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Love to hear from you</h2>
+<a class="big" href="mailto:simmensromario17@gmail.com">simmensromario17@gmail.com</a>
+<p>Thank you for taking the time to look through my work.</p>
+</section>
+<footer>© 2026 Simmens Romario</footer>
+
+<script>
+var P=[
+["Poster","ICAS Employee Assistance Programme","Infographic-style information poster","#14204a","#ffe14d"],
+["Poster","It’s Zhawarma brand profile","Brand profile poster, with social handles","#f0a020","#141414"],
+["Poster","Our steps of success","Isometric outlet timeline for It’s Zhawarma","#f3efe6","#141414"],
+["Poster","Mission and vision","Textured poster for It’s Zhawarma","#e39b10","#141414"],
+["Poster","Grand opening ceremony","Invitation for The Grill Theory and Club 10 Chicken, Guduvanchery","#b3121b","#f6e3a0"],
+["Poster","Our accreditation","Framed press-coverage wall poster","#f0b01c","#141414"],
+["Logo","Invictus Technologies","Logo mark and wordmark","#2f7bff","#ffffff"],
+["Logo","Ria’s Fashion Designers","Logo with keychain and tote bag mockups","#101010","#5ee0b8"],
+["Book cover","925 Millionaire Mindset","Full wrap cover with spine, by Roajer Gilbert","#0f3a52","#f2e8c4"],
+["Book cover","The Strategic Art of Laziness","Full wrap cover for the L.A.Z.Y. Method, by Aldy Maxwell","#1d4439","#c9a876"],
+["Book cover","ChatGPT for Non-Fiction Authors","Cover for a 5-day roadmap with 100+ prompts","#ef4b45","#ffffff"],
+["Book cover","Money Skills for Teens Using AI","Full wrap cover, by Roajer Gilbert","#0e9060","#f4c928"],
+["Book cover","Oops, I Messed Up Again","Cover for a wantrepreneur’s journey","#5fb2b5","#0b2a4a"],
+["Book cover","The Baofeng Radio Field Manual","Cover in a camouflage and red scheme","#8b1217","#e9d5a4"],
+["Magazine / book","ESG Litigation guide","Cover and inner spreads for DLA Piper","#3f7f2c","#f2f6c8"],
+["Menu card","Le Riche wine flights","Tri-fold wine menu with welcome drink and three flights","#1e2740","#e03352"],
+["Menu card","The Grill Theory","Combos, BBQ, rolls, shawarma and mocktails","#1c1c1c","#ff5a2a"],
+["Menu card","Momos, shakes and more","Dense multi-category menu with prices","#161616","#f8e71c"],
+["Packaging","Neem Honey label","Wrap label with usage guide and ingredients","#e8c61a","#0f5a22"],
+["Packaging","Spice Box Rice Bran Oil","1 litre bottle label","#f1a63a","#2f6e1f"],
+["Packaging","Energy Booster","Can wrap and carton box","#2a2a2a","#e0b050"],
+["Packaging","After Shave Lotion for Men","Bottle design","#4b5058","#d3e04a"],
+["Packaging","7 Wonders juice","Carton and label for a 7-fruit juice","#b8191e","#ffffff"],
+["Infographic","Mitigating legal risks of AI","Workplace guidance, shown in print, poster and billboard layouts","#1b1f3b","#d4e157"],
+["Infographic","Business and society","Corporate philanthropy, responsibility and shared value","#0f2b4f","#d4e157"],
+["Infographic","UK mini-budget 2022","Mobile-sized summary of tax changes","#14233f","#f2a900"],
+["Infographic","Year-end deadlines timeline","Finance and HR dates from 30 Nov to 10 Jan","#142a50","#e7b838"],
+["Infographic","Events calendar","Two signage layouts for upcoming firm events","#2a3f68","#e8566f"],
+["Vector illustration","Street at dusk","Lamp post, bus stop and crossing","#3f66c8","#fff3b0"],
+["Vector illustration","Woman in red dupatta","Gradient and bead detail illustration","#ff8a1e","#ffffff"],
+["Vector illustration","Word guitar","Guitar shaped from looping words, on a dark stage","#000a1e","#ffd42a"],
+["Trifold","Dein Weg zum Stipendium","German-language scholarship path leaflet for DLA Piper","#151a33","#b7cc2a"]
+];
+var cats=["All"].concat(P.map(function(p){return p[0]}).filter(function(c,i,a){return a.indexOf(c)===i}));
+var f=document.getElementById("filters"),g=document.getElementById("grid");
+P.forEach(function(p){var d=document.createElement("article");d.className="t";d.dataset.c=p[0];var gold=P.indexOf(p)%2===0;d.style.background=gold?"#d4af37":"#141209";d.style.color=gold?"#0a0a0a":"#e6c35c";d.innerHTML="<small></small><b></b><span></span>";d.children[0].textContent=p[0];d.children[1].textContent=p[1];d.children[2].textContent=p[2];g.appendChild(d)});
+cats.forEach(function(c,i){var b=document.createElement("button");b.textContent=c;b.setAttribute("aria-pressed",i===0);b.onclick=function(){[].forEach.call(f.children,function(x){x.setAttribute("aria-pressed",x===b)});[].forEach.call(g.children,function(t){t.hidden=!(c==="All"||t.dataset.c===c)})};f.appendChild(b)});
+</script>
+</body>
+</html>
